@@ -88,7 +88,11 @@ public class Move : MonoBehaviour
             block = false;
             animator.SetBool("Block", block);
         }
-
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("Jump", true);
+        }
         if (!Input.anyKey)
         {
             mag = 0;
@@ -98,6 +102,7 @@ public class Move : MonoBehaviour
             animator.SetBool("HeavyPunch", heavyPunch);
             animator.SetBool("Jump", false);
             animator.SetBool("FeetKick", feetKick);
+            animator.SetBool("Jump", false); 
         }
     }
 }
