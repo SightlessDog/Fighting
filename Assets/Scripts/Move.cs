@@ -6,7 +6,8 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private float mag;
     [SerializeField] private bool punch;
-    [SerializeField] private bool heavyPunch; 
+    [SerializeField] private bool heavyPunch;
+    [SerializeField] private bool feetKick;
     [SerializeField] private bool block;
     [SerializeField] private bool run;
     [SerializeField] private int health = 100;
@@ -35,6 +36,14 @@ public class Move : MonoBehaviour
             run = false;
             heavyPunch = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            feetKick = true;
+        } else if (Input.GetKeyUp(KeyCode.E))
+        {
+            feetKick = false;
+        }
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -60,6 +69,10 @@ public class Move : MonoBehaviour
             {
                 animator.SetBool("HeavyPunch", heavyPunch);         
             }
+            else if (feetKick)
+            {
+                animator.SetBool("FeetKick", feetKick);
+            }
             else
             {
                 punch = true;  
@@ -75,6 +88,7 @@ public class Move : MonoBehaviour
             block = false;
             animator.SetBool("Block", block);
         }
+
         if (!Input.anyKey)
         {
             mag = 0;
@@ -83,6 +97,7 @@ public class Move : MonoBehaviour
             animator.SetBool("Punch", punch);
             animator.SetBool("HeavyPunch", heavyPunch);
             animator.SetBool("Jump", false);
+            animator.SetBool("FeetKick", feetKick);
         }
     }
 }
