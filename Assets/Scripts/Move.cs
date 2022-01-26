@@ -6,13 +6,16 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private float mag;
     [SerializeField] private bool punch;
+    [SerializeField] private bool heavyPunch; 
     [SerializeField] private bool block;
+    [SerializeField] private bool run;
+    [SerializeField] private int health = 100;
     public CharacterController characterController;
     public Transform cam;
-    public float speed = 6f;
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,16 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.W))
-        // {
-        //     mag += 0.2f;
-        //     animator.SetFloat("Mag", mag);
-        // }
-        
+        // Moving 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            run = true;
+            heavyPunch = true;
+        } else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            run = false;
+            heavyPunch = false;
+        }
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -40,14 +47,25 @@ public class Move : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             mag += 0.2f;
             animator.SetFloat("Mag", mag);
+            animator.SetBool("Sprint", run);
         }
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("Jump", true);
+        }
+        // Punching and Blocking
         if (Input.GetMouseButtonDown(0))
         {
-            punch = true;
-            animator.SetBool("Punch", punch);
+            if (heavyPunch) 
+            {
+                animator.SetBool("HeavyPunch", heavyPunch);         
+            }
+            else
+            {
+                punch = true;  
+                animator.SetBool("Punch", punch);
+            }
         }
-
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             block = true;
@@ -63,6 +81,8 @@ public class Move : MonoBehaviour
             punch = false;
             animator.SetFloat("Mag", mag);
             animator.SetBool("Punch", punch);
+            animator.SetBool("HeavyPunch", heavyPunch);
+            animator.SetBool("Jump", false);
         }
     }
 }
