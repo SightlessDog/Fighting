@@ -1,13 +1,7 @@
 fileFormatVersion: 2
 guid: e4d200bd9cd394c85b6d524927580559
-<<<<<<< HEAD
-timeCreated: 1552818386
-licenseType: Store
-DefaultImporter:
-=======
 DefaultImporter:
   externalObjects: {}
->>>>>>> c03565e (feat(Player): add jump feature)
   userData: 
   assetBundleName: 
   assetBundleVariant: 
