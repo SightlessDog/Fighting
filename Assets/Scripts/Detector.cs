@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Detector : MonoBehaviour
 {
-    public bool hit;
+    public bool EnemyHit;
+
+    public bool PlayerHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +24,21 @@ public class Detector : MonoBehaviour
     {
         if (col.GetComponent<Collider>().CompareTag("enemy"))
         {
-            Debug.Log("Hitting");
-            hit = true;
+            Debug.Log("Enemy Hitting");
+            EnemyHit = true;
         }
         else
         {
-            hit = false;
+            EnemyHit = false;
+        }
+        if (col.GetComponent<Collider>().CompareTag("Player"))
+        {
+            Debug.Log("Player hitting");
+            PlayerHit = true;
+        }
+        else
+        {
+            PlayerHit = false;
         }
     }
 }

@@ -31,7 +31,8 @@ public class Move : MonoBehaviour
         {
             run = true;
             heavyPunch = true;
-        } else if (Input.GetKeyUp(KeyCode.LeftShift))
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             run = false;
             heavyPunch = false;
@@ -40,17 +41,19 @@ public class Move : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             feetKick = true;
-        } else if (Input.GetKeyUp(KeyCode.E))
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             feetKick = false;
         }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity,
                 turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -58,16 +61,18 @@ public class Move : MonoBehaviour
             animator.SetFloat("Mag", mag);
             animator.SetBool("Sprint", run);
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("Jump", true);
         }
+
         // Punching and Blocking
         if (Input.GetMouseButtonDown(0))
         {
-            if (heavyPunch) 
+            if (heavyPunch)
             {
-                animator.SetBool("HeavyPunch", heavyPunch);         
+                animator.SetBool("HeavyPunch", heavyPunch);
             }
             else if (feetKick)
             {
@@ -75,20 +80,22 @@ public class Move : MonoBehaviour
             }
             else
             {
-                punch = true;  
+                punch = true;
                 animator.SetBool("Punch", punch);
             }
         }
+
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             block = true;
             animator.SetBool("Block", block);
-        } else if (Input.GetKeyUp(KeyCode.LeftControl))
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             block = false;
             animator.SetBool("Block", block);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("Jump", true);
@@ -102,7 +109,7 @@ public class Move : MonoBehaviour
             animator.SetBool("HeavyPunch", heavyPunch);
             animator.SetBool("Jump", false);
             animator.SetBool("FeetKick", feetKick);
-            animator.SetBool("Jump", false); 
+            animator.SetBool("Jump", false);
         }
     }
 }
