@@ -2561,6 +2561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 0}
+  enemyObject: {fileID: 0}
 --- !u!135 &267016478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8108,6 +8110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &332622333
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8424,6 +8428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &356630931
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10411,6 +10417,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &610114211
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12892,10 +12900,10 @@ GameObject:
   - component: {fileID: 831071481}
   - component: {fileID: 831071479}
   - component: {fileID: 831071478}
-  - component: {fileID: 831071477}
   - component: {fileID: 831071476}
   - component: {fileID: 831071480}
   - component: {fileID: 831071484}
+  - component: {fileID: 831071477}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: enemy
@@ -12921,7 +12929,7 @@ MonoBehaviour:
   feetKick: 0
   block: 0
   run: 0
-  health: 100
+  health: 1000
   characterController: {fileID: 831071479}
   cam: {fileID: 628142847}
   turnSmoothTime: 0.1
@@ -12934,11 +12942,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 831071475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2f6583f995d0841b72c93788e4beb2, type: 3}
+  m_Script: {fileID: 11500000, guid: dcfb500943ced904eb4d3e93ea0a9404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  healthBar: {fileID: 1448596701}
+  health: 5000
+  healthBar: {fileID: 0}
 --- !u!81 &831071478
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12978,6 +12986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 0}
+  hit: 0
 --- !u!205 &831071481
 LODGroup:
   m_ObjectHideFlags: 0
@@ -13062,6 +13071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!1001 &831879385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13972,7 +13983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2f6583f995d0841b72c93788e4beb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 5000
   healthBar: {fileID: 1448596701}
 --- !u!81 &897186552
 AudioListener:
@@ -14122,6 +14133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 0}
+  enemyObject: {fileID: 0}
 --- !u!135 &918712261
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15985,6 +15998,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &1083556524
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17856,6 +17871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &1213646173
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20809,6 +20826,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &1483381243
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21228,6 +21247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &1518050276
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22683,6 +22704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!135 &1662572633
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -36355,6 +36378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHit: 0
   PlayerHit: 0
+  playerObject: {fileID: 8158344275847668633}
+  enemyObject: {fileID: 831071475}
 --- !u!114 &8158344275847668637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36368,6 +36393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 0}
+  hit: 0
 --- !u!1 &8158344275847669465
 GameObject:
   m_ObjectHideFlags: 0

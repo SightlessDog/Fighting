@@ -4,23 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
- [SerializeField] private int health = 100;
+ [SerializeField] private int health = 1000;
  public Image healthBar;
  Animator animator;
  Player player;
- EnemyHit enemyHit;
 
  private void Start()
  {
   animator = gameObject.GetComponent<Animator>(); 
   player = gameObject.GetComponent<Player>();
-  enemyHit = gameObject.GetComponent<EnemyHit>();
  }
  private void Update()
  {
-  if (player && player.hit || enemyHit && enemyHit.hit)
+  if (player && player.hit)
   {
    health -= 10;
   }
