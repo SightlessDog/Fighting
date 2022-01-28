@@ -35,6 +35,7 @@ public class Detector : MonoBehaviour
         {
             EnemyHit = false;
         }
+
         if (col.GetComponent<Collider>().CompareTag("Player") && (player.punch || player.heavyPunch || player.feetKick) && !enemy.block)
         {
             Debug.Log("Player hitting");

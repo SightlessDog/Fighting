@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     Animator animator;
     public Detector detector;
+    public AudioClip manHit;
+    public AudioSource audioSource;
+
 
     public bool hit;
     // Start is called before the first frame update
@@ -13,6 +16,7 @@ public class Player : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         detector = gameObject.GetComponent<Detector>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +26,8 @@ public class Player : MonoBehaviour
         {
             hit = true;
             animator.SetBool("hit", true);
+            audioSource.clip = manHit;
+            audioSource.Play();
         }
         else
         {

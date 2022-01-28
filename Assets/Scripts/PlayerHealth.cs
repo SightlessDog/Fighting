@@ -10,17 +10,25 @@ public class PlayerHealth : MonoBehaviour
  public Image healthBar;
  Animator animator;
  Player player;
-
+ public AudioSource audioSource;
+ public AudioClip manHurting;
  private void Start()
  {
   animator = gameObject.GetComponent<Animator>(); 
   player = gameObject.GetComponent<Player>();
+  audioSource = gameObject.GetComponent<AudioSource>();
  }
  private void Update()
  {
   if (player && player.hit)
   {
    health -= 10;
+  }
+
+  if (health < 50)
+  {
+   audioSource.clip = manHurting;
+   audioSource.Play();
   }
   if (health <= 0)
   {

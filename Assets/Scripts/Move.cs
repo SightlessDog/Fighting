@@ -16,10 +16,19 @@ public class Move : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     Animator animator;
+    public AudioClip[] audioSources;
+    public AudioSource audioSource;
+    public AudioClip manPunch;
+    public void playSound()
+    {
+        audioSource.clip = audioSources[Random.Range(0, audioSources.Length)];
+        audioSource.Play ();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         animator = gameObject.GetComponent<Animator>();
     }
 
@@ -83,6 +92,8 @@ public class Move : MonoBehaviour
                 punch = true;
                 animator.SetBool("Punch", punch);
             }
+            audioSource.clip = manPunch;
+            audioSource.Play ();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -99,6 +110,11 @@ public class Move : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("Jump", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            playSound();
         }
         if (!Input.anyKey)
         {
