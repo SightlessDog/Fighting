@@ -15456,11 +15456,12 @@ GameObject:
   - component: {fileID: 831071481}
   - component: {fileID: 831071479}
   - component: {fileID: 831071478}
-  - component: {fileID: 831071476}
   - component: {fileID: 831071480}
   - component: {fileID: 831071484}
   - component: {fileID: 831071477}
   - component: {fileID: 831071485}
+  - component: {fileID: 831071486}
+  - component: {fileID: 831071476}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: enemy
@@ -15477,21 +15478,111 @@ MonoBehaviour:
   m_GameObject: {fileID: 831071475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda51e63c6529354bb6466b6a9423066, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mag: 0
-  punch: 0
-  heavyPunch: 0
-  feetKick: 0
-  block: 0
-  run: 0
-  health: 1000
-  characterController: {fileID: 831071479}
-  cam: {fileID: 628142847}
-  turnSmoothTime: 0.1
-  manPunch: {fileID: 8300000, guid: 93b063c10bc76c4449e86cdd7b8a15b2, type: 3}
-  audioSource: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: 58aa73861cf0cda499e080755b1333eb, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: df737ce5-c5ff-486f-b507-ee3e426064eb
+    m_ActionName: PlayerControls/Movements[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick,/XInputControllerWindows/dpad]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 831071486}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: punchAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b349177-25a6-477f-91c1-95b59cc2f777
+    m_ActionName: PlayerControls/Punch[/XInputControllerWindows/buttonSouth,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 831071486}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: feetKickAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7fae5338-3411-4bd3-9520-240c6611a833
+    m_ActionName: PlayerControls/Kick[/Keyboard/e,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 831071486}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: runAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4022b898-2dbc-4383-ab5c-24d2438bceb9
+    m_ActionName: PlayerControls/Run[/Keyboard/shift,/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 831071486}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: blockAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b6e831d-8194-4e14-921b-3260982f7830
+    m_ActionName: PlayerControls/Block[/Keyboard/ctrl,/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 831071486}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: jumpAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3e7fd314-3725-424c-8f1c-1d8dd252864b
+    m_ActionName: PlayerControls/Jump[/Keyboard/space,/XInputControllerWindows/buttonEast]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: PlayerControls
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &831071477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15732,6 +15823,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &831071486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831071475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e85a8732714c314a971eee7454491a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mag: 0
+  punch: 0
+  heavyPunch: 0
+  feetKick: 0
+  block: 0
+  run: 0
+  health: 100
+  characterController: {fileID: 831071479}
+  cam: {fileID: 628142847}
+  turnSmoothTime: 0.1
+  audioSources: []
+  audioSource: {fileID: 831071485}
+  manPunch: {fileID: 8300000, guid: 93b063c10bc76c4449e86cdd7b8a15b2, type: 3}
+  playerInput: {fileID: 831071476}
 --- !u!1001 &831879385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17504,6 +17621,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d5a035f34086f7479e576081ff11da9, type: 3}
   audioSource: {fileID: 8158344275847668638}
   manPunch: {fileID: 8300000, guid: 93b063c10bc76c4449e86cdd7b8a15b2, type: 3}
+  playerInput: {fileID: 919132149291867103}
 --- !u!114 &960130916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23347,7 +23465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe9847f79f7d894db7307c38cb8df17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 8158344275847303999}
+  target: {fileID: 543450653563715939}
   smoothSpeed: 0.125
   offset: {x: -4, y: 3, z: 0}
 --- !u!81 &1425453791
@@ -33490,6 +33608,7 @@ GameObject:
   - component: {fileID: 919132149291867099}
   - component: {fileID: 919132149291867098}
   - component: {fileID: 919132149291867102}
+  - component: {fileID: 919132149291867103}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33651,6 +33770,120 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149291867097}
   m_Enabled: 1
+--- !u!114 &919132149291867103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149291867097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 58aa73861cf0cda499e080755b1333eb, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: df737ce5-c5ff-486f-b507-ee3e426064eb
+    m_ActionName: PlayerControls/Movements[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 960130915}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: punchAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b349177-25a6-477f-91c1-95b59cc2f777
+    m_ActionName: PlayerControls/Punch[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 960130915}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: feetKickAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7fae5338-3411-4bd3-9520-240c6611a833
+    m_ActionName: PlayerControls/Kick[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 960130915}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: runAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4022b898-2dbc-4383-ab5c-24d2438bceb9
+    m_ActionName: PlayerControls/Run[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 960130915}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: blockAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b6e831d-8194-4e14-921b-3260982f7830
+    m_ActionName: PlayerControls/Block[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 960130915}
+        m_TargetAssemblyTypeName: Move, Assembly-CSharp
+        m_MethodName: jumpAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3e7fd314-3725-424c-8f1c-1d8dd252864b
+    m_ActionName: PlayerControls/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: PlayerControls
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!137 &1001626796563088692
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -38957,6 +39190,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4327098e9f378ce459da5e67025fdc89, type: 3}
   audioSource: {fileID: 919132149291867098}
   manPunch: {fileID: 0}
+  playerInput: {fileID: 0}
 --- !u!143 &8158344275847668635
 CharacterController:
   m_ObjectHideFlags: 0
