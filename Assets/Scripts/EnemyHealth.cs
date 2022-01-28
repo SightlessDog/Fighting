@@ -10,11 +10,15 @@ public class EnemyHealth : MonoBehaviour
     public Image healthBar;
     Animator animator;
     EnemyHit enemyHit;
+    public AudioClip manHurting;
+    public AudioSource audioSource;
+
 
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>(); 
         enemyHit = gameObject.GetComponent<EnemyHit>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -22,6 +26,12 @@ public class EnemyHealth : MonoBehaviour
         {
             health -= 10;
             new WaitForSeconds(1);
+        }
+
+        if (health < 50)
+        {
+            audioSource.clip = manHurting;
+            audioSource.Play();
         }
         if (health <= 0)
         {

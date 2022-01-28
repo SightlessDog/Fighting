@@ -16,11 +16,14 @@ public class Enemy : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     Animator animator;
-
+    public AudioClip manPunch;
+    public AudioSource audioSource;
+    
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -78,6 +81,8 @@ public class Enemy : MonoBehaviour
                 punch = true;  
                 animator.SetBool("Punch", punch);
             }
+            audioSource.clip = manPunch;
+            audioSource.Play ();
         }
         if (Input.GetKeyDown(KeyCode.RightControl))
         {
