@@ -6,12 +6,16 @@ using UnityEngine;
 public class Detector : MonoBehaviour
 {
     public bool EnemyHit;
-
     public bool PlayerHit;
+    public GameObject playerObject; 
+    public GameObject enemyObject;
+    private Move player;
+    private Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = playerObject.GetComponent<Move>();
+        enemy = enemyObject.GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -22,7 +26,7 @@ public class Detector : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<Collider>().CompareTag("enemy"))
+        if (col.GetComponent<Collider>().CompareTag("enemy") && (enemy.punch || enemy.heavyPunch || enemy.feetKick) && !player.block)
         {
             Debug.Log("Enemy Hitting");
             EnemyHit = true;
@@ -31,7 +35,7 @@ public class Detector : MonoBehaviour
         {
             EnemyHit = false;
         }
-        if (col.GetComponent<Collider>().CompareTag("Player"))
+        if (col.GetComponent<Collider>().CompareTag("Player") && (player.punch || player.heavyPunch || player.feetKick) && !enemy.block)
         {
             Debug.Log("Player hitting");
             PlayerHit = true;

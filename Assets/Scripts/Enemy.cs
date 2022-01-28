@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float mag;
-    [SerializeField] private bool punch;
-    [SerializeField] private bool heavyPunch;
-    [SerializeField] private bool feetKick;
-    [SerializeField] private bool block;
+    [SerializeField] public bool punch;
+    [SerializeField] public bool heavyPunch;
+    [SerializeField] public bool feetKick;
+    [SerializeField] public bool block;
     [SerializeField] private bool run;
     [SerializeField] private int health = 100;
     public CharacterController characterController;
