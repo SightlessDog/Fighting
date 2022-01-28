@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class EnemyHit : MonoBehaviour
 {
     Animator animator;
     public Detector detector;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (detector.EnemyHit)
+        if (detector.PlayerHit)
         {
             hit = true;
             animator.SetBool("hit", true);
