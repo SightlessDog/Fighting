@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        animator = gameObject.GetComponent<Animator>(); 
+        animator = gameObject.GetComponent<Animator>();
         enemyHit = gameObject.GetComponent<EnemyHit>();
         audioSource = gameObject.GetComponent<AudioSource>();
     }
@@ -35,16 +35,16 @@ public class EnemyHealth : MonoBehaviour
         }
         if (health <= 0)
         {
-            health = 0; 
+            health = 0;
         }
- 
-        animator.SetInteger("Health", health); 
+
+        animator.SetInteger("Health", health);
     }
 
     public void damage(int damage)
     {
         health -= damage;
-        healthBar.fillAmount = (float) health / 100;
-        Debug.Log("Health: " + (float) health / 100);
+        healthBar.fillAmount = (float)health / 100;
+        Debug.Log("Health: " + (float)health / 100);
     }
 }

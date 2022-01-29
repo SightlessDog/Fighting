@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
@@ -19,10 +20,18 @@ public class Move : MonoBehaviour
     public AudioClip[] audioSources;
     public AudioSource audioSource;
     public AudioClip manPunch;
+    public PlayerInput playerInput;
+    private InputAction moveAction;
+
     public void playSound()
     {
         audioSource.clip = audioSources[Random.Range(0, audioSources.Length)];
-        audioSource.Play ();
+        audioSource.Play();
+    }
+
+    void Awake()
+    {
+        moveAction = playerInput.actions["Movements"];
     }
 
     // Start is called before the first frame update
@@ -32,33 +41,27 @@ public class Move : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Moving 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            run = true;
-            heavyPunch = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            run = false;
-            heavyPunch = false;
-        }
+        movementAction();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!Input.anyKey)
         {
-            feetKick = true;
+            mag = 0;
+            punch = false;
+            animator.SetFloat("Mag", mag);
+            animator.SetBool("Punch", punch);
+            animator.SetBool("HeavyPunch", heavyPunch);
+            animator.SetBool("Jump", false);
+            animator.SetBool("FeetKick", feetKick);
+            animator.SetBool("Jump", false);
         }
-        else if (Input.GetKeyUp(KeyCode.E))
-        {
-            feetKick = false;
-        }
+    }
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+    public void movementAction()
+    {
+        Vector2 input = moveAction.ReadValue<Vector2>();
+        Vector3 direction = new Vector3(input.x, 0, input.y);
 
         if (direction.magnitude >= 0.1f)
         {
@@ -70,14 +73,59 @@ public class Move : MonoBehaviour
             animator.SetFloat("Mag", mag);
             animator.SetBool("Sprint", run);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+    public void feetKickAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            feetKick = true;
+        }
+        else
+        {
+            feetKick = false;
+        }
+    }
+
+    public void blockAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            block = true;
+            animator.SetBool("Block", block);
+        }
+        else
+        {
+            block = false;
+            animator.SetBool("Block", block);
+        }
+    }
+
+    public void runAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            run = true;
+            heavyPunch = true;
+        }
+        else
+        {
+            run = false;
+            heavyPunch = false;
+        }
+    }
+
+    public void jumpAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
         {
             animator.SetBool("Jump", true);
         }
+    }
 
-        // Punching and Blocking
-        if (Input.GetMouseButtonDown(0))
+    public void punchAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
         {
             if (heavyPunch)
             {
@@ -92,40 +140,6 @@ public class Move : MonoBehaviour
                 punch = true;
                 animator.SetBool("Punch", punch);
             }
-            audioSource.clip = manPunch;
-            audioSource.Play ();
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            block = true;
-            animator.SetBool("Block", block);
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            block = false;
-            animator.SetBool("Block", block);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetBool("Jump", true);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            playSound();
-        }
-        if (!Input.anyKey)
-        {
-            mag = 0;
-            punch = false;
-            animator.SetFloat("Mag", mag);
-            animator.SetBool("Punch", punch);
-            animator.SetBool("HeavyPunch", heavyPunch);
-            animator.SetBool("Jump", false);
-            animator.SetBool("FeetKick", feetKick);
-            animator.SetBool("Jump", false);
         }
     }
 }
