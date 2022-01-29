@@ -62,7 +62,6 @@ public class Enemy : MonoBehaviour
     {
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector3 direction = new Vector3(input.x, 0, input.y);
-
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -141,13 +140,5 @@ public class Enemy : MonoBehaviour
                 animator.SetBool("Punch", punch);
             }
         }
-    }
-
-    void OnEnable(){
-        playerInput.currentActionMap.Enable();
-    }
-
-     void OnDisable(){
-        playerInput.currentActionMap.Disable();
     }
 }
