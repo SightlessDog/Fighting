@@ -142,4 +142,12 @@ public class Move : MonoBehaviour
             }
         }
     }
+    
+    public void insultAction(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            playSound();
+        }
+    }
 }

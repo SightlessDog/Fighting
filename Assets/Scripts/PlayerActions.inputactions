@@ -43,12 +43,20 @@
                     "id": "5b6e831d-8194-4e14-921b-3260982f7830",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold"
+                    "interactions": ""
                 },
                 {
                     "name": "Jump",
                     "type": "Button",
                     "id": "3e7fd314-3725-424c-8f1c-1d8dd252864b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Insult",
+                    "type": "Button",
+                    "id": "52599189-2ca3-4bf3-b07d-6c5d9f00f7d8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -202,7 +210,7 @@
                     "name": "",
                     "id": "fe4ea9ba-36ff-4d02-8e20-8b0905eb1d8e",
                     "path": "<Keyboard>/ctrl",
-                    "interactions": "Hold",
+                    "interactions": "Hold(duration=5)",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Block",
@@ -213,7 +221,7 @@
                     "name": "",
                     "id": "55229a86-4ca7-480a-8ec1-e0c0b9c67402",
                     "path": "<Gamepad>/leftShoulder",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Block",
@@ -239,6 +247,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2807f8a-b63c-4add-8939-e531e0155639",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Insult",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9889e7ed-eb7f-4821-b2af-cfbc6a88d829",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Insult",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
