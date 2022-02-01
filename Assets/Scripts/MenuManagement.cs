@@ -20,4 +20,9 @@ public class MenuManagement : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+
+    public void ReturnToMainMenu()
+    {
+        
+    }
 }
