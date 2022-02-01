@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private int health = 1000;
-    public Image healthBar;
+    public int currentHealth;
+    public int maxHealth;
+    public HealthBar healthBar;
     Animator animator;
     EnemyHit enemyHit;
     public AudioClip manHurting;
@@ -16,6 +17,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         animator = gameObject.GetComponent<Animator>();
         enemyHit = gameObject.GetComponent<EnemyHit>();
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -24,27 +27,21 @@ public class EnemyHealth : MonoBehaviour
     {
         if (enemyHit && enemyHit.hit)
         {
-            health -= 10;
-            new WaitForSeconds(1);
+            currentHealth -= 10;
+            healthBar.SetHealth(currentHealth);
+            //new WaitForSeconds(1);
         }
 
-        if (health < 50)
+        if (currentHealth < 50)
         {
             audioSource.clip = manHurting;
             audioSource.Play();
         }
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
-            health = 0;
+            currentHealth = 0;
         }
 
-        animator.SetInteger("Health", health);
-    }
-
-    public void damage(int damage)
-    {
-        health -= damage;
-        healthBar.fillAmount = (float)health / 100;
-        Debug.Log("Health: " + (float)health / 100);
+        animator.SetInteger("Health", currentHealth);
     }
 }

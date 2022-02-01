@@ -6,14 +6,18 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int health = 1000;
-    public Image healthBar;
+    public int currentHealth;
+    public int maxHealth;
+    public HealthBar healthBar;
+
     Animator animator;
     Player player;
     public AudioSource audioSource;
     public AudioClip manHurting;
     private void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         animator = gameObject.GetComponent<Animator>();
         player = gameObject.GetComponent<Player>();
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -22,26 +26,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (player && player.hit)
         {
-            health -= 10;
+            currentHealth -= 10;
+            healthBar.SetHealth(currentHealth);
         }
 
-        if (health < 50)
+        if (currentHealth < 50)
         {
             audioSource.clip = manHurting;
             audioSource.Play();
         }
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
-            health = 0;
+            currentHealth = 0;
         }
 
-        animator.SetInteger("Health", health);
-    }
-
-    public void damage(int damage)
-    {
-        health -= damage;
-        healthBar.fillAmount = (float)health / 100;
-        Debug.Log("Health: " + (float)health / 100);
+        animator.SetInteger("Health", currentHealth);
     }
 }
