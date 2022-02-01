@@ -11,7 +11,6 @@ public class Move : MonoBehaviour
     [SerializeField] public bool feetKick;
     [SerializeField] public bool block;
     [SerializeField] private bool run;
-    [SerializeField] private int health = 100;
     public CharacterController characterController;
     public Transform cam;
     public float turnSmoothTime = 0.1f;
