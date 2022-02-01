@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 910480822}
   - component: {fileID: 910480823}
   m_Layer: 5
-  m_Name: StartGame
+  m_Name: MenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 910480823}
-        m_TargetAssemblyTypeName: StartPlay, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuManagement, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1214,7 +1214,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 910480823}
-        m_TargetAssemblyTypeName: StartPlay, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuManagement, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 
 
-public class StartPlay : MonoBehaviour
+public class MenuManagement : MonoBehaviour
 {
     // Start is called before the first frame update
     public void Play()
@@ -17,6 +17,7 @@ public class StartPlay : MonoBehaviour
     // Update is called once per frame
     public void Quit()
     {
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
