@@ -35,10 +35,5 @@ public class Player : MonoBehaviour
             hit = false;
             animator.SetBool("hit", false);
         }
-
-		if (Input.GetKeyDown(KeyCode.M))
-        {
-			SceneManager.LoadScene(0);
-        }
     }
 }
