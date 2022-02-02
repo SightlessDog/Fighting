@@ -7615,7 +7615,7 @@ GameObject:
   - component: {fileID: 311230654}
   m_Layer: 5
   m_Name: EndgameUI
-  m_TagString: Untagged
+  m_TagString: endgameUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13669,6 +13669,8 @@ MonoBehaviour:
   healthBar: {fileID: 1464745260}
   audioSource: {fileID: 0}
   manHurting: {fileID: 8300000, guid: 41abe2e0e948b834c8f07886b2d1a090, type: 3}
+  endgameUI: {fileID: 311230653}
+  winnerText: {fileID: 704744973}
 --- !u!1 &965790816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40d3ea0f9eaeaab4a81ef317e8b231cd, type: 3}
@@ -18820,7 +18822,7 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0.0324955, a: 1}
-    key1: {r: 0.93348277, g: 1, b: 0.41037738, a: 1}
+    key1: {r: 1, g: 0.96351755, b: 0, a: 1}
     key2: {r: 0, g: 1, b: 0.19600487, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -19740,6 +19742,7 @@ GameObject:
   - component: {fileID: 1556676443}
   - component: {fileID: 1556676442}
   - component: {fileID: 1556676441}
+  - component: {fileID: 1556676444}
   m_Layer: 5
   m_Name: PlayagainButton
   m_TagString: Untagged
@@ -19810,7 +19813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1556676442}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1556676444}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadCurrentScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1556676442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19849,6 +19864,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556676439}
   m_CullTransparentMesh: 1
+--- !u!114 &1556676444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556676439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0f47ef1e08d8d4c9513eff4b8c687c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1556938509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44f548963f0ac174d944de457b1790de, type: 3}
@@ -23944,7 +23971,7 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0.0324955, a: 1}
-    key1: {r: 0.93348277, g: 1, b: 0.41037738, a: 1}
+    key1: {r: 1, g: 0.96351755, b: 0, a: 1}
     key2: {r: 0, g: 1, b: 0.19600487, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -26716,6 +26743,8 @@ MonoBehaviour:
   healthBar: {fileID: 1998800379}
   manHurting: {fileID: 8300000, guid: 41abe2e0e948b834c8f07886b2d1a090, type: 3}
   audioSource: {fileID: 0}
+  endgameUI: {fileID: 311230653}
+  winnerText: {fileID: 704744973}
 --- !u!114 &1069188665688139750
 MonoBehaviour:
   m_ObjectHideFlags: 0
