@@ -14680,10 +14680,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 875462369}
-        m_TargetAssemblyTypeName: MenuConfirm, Assembly-CSharp
-        m_MethodName: KeepPlaying
-        m_Mode: 1
+      - m_Target: {fileID: 895883461}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
