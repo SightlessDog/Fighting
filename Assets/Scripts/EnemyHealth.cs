@@ -13,6 +13,8 @@ public class EnemyHealth : MonoBehaviour
     EnemyHit enemyHit;
     public AudioClip manHurting;
     public AudioSource audioSource;
+    public GameObject endgameUI;
+    public Text winnerText;
 
 
     private void Start()
@@ -40,8 +42,15 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            endGame();
         }
 
         animator.SetInteger("Health", currentHealth);
+    }
+
+    void endGame()
+    {
+        endgameUI.SetActive(true);
+        winnerText.text = "Not Beauty";
     }
 }
