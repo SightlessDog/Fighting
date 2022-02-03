@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour
     Player player;
     public AudioSource audioSource;
     public AudioClip manHurting;
+    public GameObject endgameUI;
+    public Text winnerText;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -38,8 +41,15 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            endGame();
         }
 
         animator.SetInteger("Health", currentHealth);
+    }
+
+    void endGame()
+    {
+        endgameUI.SetActive(true);
+        winnerText.text = "The Beast";
     }
 }
