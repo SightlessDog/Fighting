@@ -20,6 +20,8 @@ public class SettingsMenu : MonoBehaviour
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+		_qualityLevel = qualityIndex;
+		Debug.Log(_qualityLevel);
     }
     
     public void SetFullScreen(bool isFullScreen)
@@ -43,11 +45,10 @@ public class SettingsMenu : MonoBehaviour
     public void SaveSettings()
     {
         PlayerPrefs.SetFloat("volume", AudioListener.volume);
-		PlayerPrefs.SetFloat("volume", _volumeSlider.value);
                 
         PlayerPrefs.SetInt("quality", _qualityLevel);
 
-        PlayerPrefs.SetInt("fullscreen", (_isFullScreen ? 1 : 0));
+        PlayerPrefs.SetInt("fullscreen", (_isFullScreen ? 0 : 1));
 
         StartCoroutine(ConfirmationBox());
     }
