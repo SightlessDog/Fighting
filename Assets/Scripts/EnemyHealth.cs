@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
             //new WaitForSeconds(1);
         }
 
-        if (currentHealth < 50)
+        if (currentHealth < 100)
         {
             audioSource.clip = manHurting;
             audioSource.Play();

@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
 
-        if (currentHealth < 50)
+        if (currentHealth < 100)
         {
             audioSource.clip = manHurting;
             audioSource.Play();
