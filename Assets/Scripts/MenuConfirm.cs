@@ -22,7 +22,7 @@ public class MenuConfirm : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             confirmationPrompt.SetActive(true);
         }
