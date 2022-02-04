@@ -19507,7 +19507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464745258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b6e2d02a3645c6921214dc25a7f20, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -19549,21 +19549,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  variable:
-    variableType: 0
-    global:
-      allowTypesMask: 4
-      name: 
-    local:
-      allowTypesMask: 4
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!1001 &1468972673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25134,7 +25119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998800377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b6e2d02a3645c6921214dc25a7f20, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -25171,26 +25156,11 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 5000
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 5000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  variable:
-    variableType: 0
-    global:
-      allowTypesMask: 4
-      name: 
-    local:
-      allowTypesMask: 4
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!1001 &2004278567
 PrefabInstance:
   m_ObjectHideFlags: 0
