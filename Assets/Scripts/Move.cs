@@ -43,6 +43,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         movementAction();
+        updateStamina();
 
         if (!Input.anyKey)
         {
@@ -76,7 +77,7 @@ public class Move : MonoBehaviour
 
     public void feetKickAction(InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && (StaminaBar.instance.currentStamina > 10))
         {
             feetKick = true;
         }
@@ -88,7 +89,7 @@ public class Move : MonoBehaviour
 
     public void blockAction(InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && (StaminaBar.instance.currentStamina > 5))
         {
             block = true;
             animator.SetBool("Block", block);
@@ -102,7 +103,7 @@ public class Move : MonoBehaviour
 
     public void runAction(InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && (StaminaBar.instance.currentStamina > 10))
         {
             run = true;
             heavyPunch = true;
@@ -116,7 +117,7 @@ public class Move : MonoBehaviour
 
     public void jumpAction(InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && (StaminaBar.instance.currentStamina > 10))
         {
             animator.SetBool("Jump", true);
         }
@@ -126,22 +127,35 @@ public class Move : MonoBehaviour
     {
         if (value.started)
         {
-            if (heavyPunch)
+            if (heavyPunch && (StaminaBar.instance.currentStamina > 20))
             {
                 animator.SetBool("HeavyPunch", heavyPunch);
             }
-            else if (feetKick)
+            else if (feetKick && (StaminaBar.instance.currentStamina > 10))
             {
                 animator.SetBool("FeetKick", feetKick);
             }
             else
             {
-                punch = true;
-                animator.SetBool("Punch", punch);
+                if (StaminaBar.instance.currentStamina > 5)
+                {
+                    punch = true;
+                    animator.SetBool("Punch", punch);
+
+                }
             }
         }
     }
-    
+
+    public void updateStamina()
+    {
+        if (punch) StaminaBar.instance.UseStamina(5);
+        else if (heavyPunch) StaminaBar.instance.UseStamina(20);
+        else if (feetKick) StaminaBar.instance.UseStamina(10);
+        else if (animator.GetBool("Jump")) StaminaBar.instance.UseStamina(15);
+        else if (block) StaminaBar.instance.UseStamina(5);
+    }
+
     public void insultAction(InputAction.CallbackContext value)
     {
         if (value.started)
