@@ -28984,7 +28984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5362b5316153442c583dd6cdb6c12ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confirmationPrompt: {fileID: 0}
+  confirmationPrompt: {fileID: 1808004508}
 --- !u!1 &974176407793868176
 GameObject:
   m_ObjectHideFlags: 0
@@ -29531,7 +29531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5362b5316153442c583dd6cdb6c12ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confirmationPrompt: {fileID: 0}
+  confirmationPrompt: {fileID: 1808004508}
 --- !u!1 &1122263774024655273
 GameObject:
   m_ObjectHideFlags: 0
