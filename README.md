@@ -10,7 +10,7 @@ Game starts in separate Menu scene. Click on **PLAY** loads the Game scene.
 
 ![Main Menu](Assets/Screenshots/MainMenu.png)
 
-Click on **Options** open Settings Menu which allows users to choose and save their preferred settings.
+Click on **Options** opens Settings Menu which allows users to choose and save their preferred settings.
 
 ![Settings](Assets/Screenshots/Settings.png)
 
