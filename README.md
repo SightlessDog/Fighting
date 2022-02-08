@@ -46,10 +46,18 @@ The player moves using the keyboard
 - **CTRL** The player takes cover behind his arms
 - **ESC** The Exit Prompt appears and asks the player if they would like to return to the menu or keep playing.
 
+![Confirmation Prompt](Assets/Screenshots/ConfirmationPrompt.png)
+
 The Player can **punch with clicking the mouse**. If they hit the enemy the value of the enemy's health bar decreases.
 
+The game is won when the healthbar of one of the players is empty. Then they can choose between playing another game or return to the the menu.
 
-#### Internal Things
+![Health Bar](Assets/Screenshots/HealthBarEmpties.png)
+![Winner Screen](Assets/Screenshots/WinnerScreen.png)
+
+
+
+# Internal Things
 - Please make sure to import Animations under Assets before starting the project
 - No direct pushes to master, If you built a new feature then please checkout a new branch and then make a merge request
 - Merge Requests has to be reviewed/tested by at least one person, if it was approved then it can be merged (please no hard feelings here and dob't anything personal :))
