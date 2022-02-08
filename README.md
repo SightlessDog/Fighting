@@ -26,6 +26,8 @@ Features include
   - Empties with every punch. When the Health Bar is empty the player loses the Game.
 - **Stamina Bar**
   - The Stamina bar empties when the player moves. If it's empty the player can not act and has to wait for it to re-fill.
+- **Open World Map**
+  - The players can move around freely.
 - **Input System**
 - **Sound Effects**
   - You can get in the mood when Rocky's Theme Music starts playing on the main menu. While playing, the soft breeze of wind is surrounding you and is only disturbed by the sounds of pain and effort when the players move and hit.
@@ -41,6 +43,7 @@ The player moves using the keyboard
 - **A** The player turns and moves left
 - **D** The player turns and moves right
 - **SPACE** The player jumps
+- **CTRL** The player takes cover behind his arms
 - **ESC** The Exit Prompt appears and asks the player if they would like to return to the menu or keep playing.
 
 The Player can **punch with clicking the mouse**. If they hit the enemy the value of the enemy's health bar decreases.
