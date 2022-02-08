@@ -1,5 +1,5 @@
 # Not Beauty and the Beast
-## Multiplayer Fighting Game by **Greek Salad Tiger Milk** (Elyess, Linh, Sophie, and Liav)
+## Multiplayer Fighting Game by **Greek Salad Tiger Milk** (Elyess Eleuch, Liav Keren, Sophie Preußer, Linh Pham)
 Unity project for B23.1 GT2 Game Engines WiSe21/22.
 
 # Features
@@ -33,6 +33,17 @@ Features include
 
 ![Game Play](Assets/Screenshots/GamePlay.png)
 
+## Game Play
+
+The player moves using the keyboard 
+- **W** The player moves away from the camera
+- **S** The player turns and moves in the direction of the camera
+- **A** The player turns and moves left
+- **D** The player turns and moves right
+- **SPACE** The player jumps
+- **ESC** The Exit Prompt appears and asks the player if they would like to return to the menu or keep playing.
+
+The Player can **punch with clicking the mouse**. If they hit the enemy the value of the enemy's health bar decreases.
 
 
 #### Internal Things
