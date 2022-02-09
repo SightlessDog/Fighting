@@ -14621,6 +14621,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   manPunch: {fileID: 8300000, guid: 93b063c10bc76c4449e86cdd7b8a15b2, type: 3}
   playerInput: {fileID: 919132149291867103}
+  staminaBar: {fileID: 1774179479}
 --- !u!114 &960130916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20952,7 +20953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 1497257805}
-  maxStamina: 100
+  maxStamina: 500
   currentStamina: 0
 --- !u!114 &1497257805
 MonoBehaviour:
@@ -20999,9 +21000,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 100
+  m_MaxValue: 500
+  m_WholeNumbers: 1
+  m_Value: 500
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24260,7 +24261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 1774179480}
-  maxStamina: 100
+  maxStamina: 500
   currentStamina: 0
 --- !u!114 &1774179480
 MonoBehaviour:
@@ -24307,9 +24308,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 100
+  m_MaxValue: 500
+  m_WholeNumbers: 1
+  m_Value: 500
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29224,6 +29225,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   manPunch: {fileID: 8300000, guid: 93b063c10bc76c4449e86cdd7b8a15b2, type: 3}
   playerInput: {fileID: 1069188665688139746}
+  staminaBar: {fileID: 1497257804}
 --- !u!114 &1069188665688139746
 MonoBehaviour:
   m_ObjectHideFlags: 0

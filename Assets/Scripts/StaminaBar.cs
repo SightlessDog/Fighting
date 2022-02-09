@@ -8,18 +8,10 @@ public class StaminaBar : MonoBehaviour
 {
     public Slider staminaBar;
 
-    [SerializeField] private int maxStamina = 100;
+    [SerializeField] private int maxStamina = 500;
     [SerializeField] public int currentStamina;
-
-    public static StaminaBar instance;
-
     private WaitForSeconds regenTime = new WaitForSeconds(0.1f);
     private Coroutine regen;
-
-    public void Awake()
-    {
-        instance = this;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +51,4 @@ public class StaminaBar : MonoBehaviour
     {
         return this.currentStamina;
     }
-
 }
