@@ -9856,7 +9856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.5904007, y: 0.000018119812}
+  m_AnchoredPosition: {x: 4.590393, y: 0.000018119812}
   m_SizeDelta: {x: 19.1809, y: 0.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541990523
@@ -19273,7 +19273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.8455, y: 0}
+  m_AnchoredPosition: {x: 4.8454895, y: 0}
   m_SizeDelta: {x: 19.6909, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381225657
@@ -20953,7 +20953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 1497257805}
-  maxStamina: 500
+  maxStamina: 1000
   currentStamina: 0
 --- !u!114 &1497257805
 MonoBehaviour:
@@ -21000,9 +21000,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 500
+  m_MaxValue: 1000
   m_WholeNumbers: 1
-  m_Value: 500
+  m_Value: 1000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24261,7 +24261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 1774179480}
-  maxStamina: 500
+  maxStamina: 1000
   currentStamina: 0
 --- !u!114 &1774179480
 MonoBehaviour:
@@ -24308,9 +24308,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 500
+  m_MaxValue: 1000
   m_WholeNumbers: 1
-  m_Value: 500
+  m_Value: 1000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

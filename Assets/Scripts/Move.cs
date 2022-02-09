@@ -23,11 +23,11 @@ public class Move : MonoBehaviour
     private InputAction moveAction;
     public StaminaBar staminaBar;
 
-    private int requiredPunchStamina = 5;
-    private int requiredHeavyPunchStamina = 7;
-    private int requiredFeetKickStamina = 8;
-    private int requiredJumpStamina = 5;
-    private int requiredBlockStamina = 5;
+    private int requiredPunchStamina = 3;
+    private int requiredHeavyPunchStamina = 1;
+    private int requiredFeetKickStamina = 1;
+    private int requiredJumpStamina = 2;
+    private int requiredBlockStamina = 2;
 
     public void playSound()
     {

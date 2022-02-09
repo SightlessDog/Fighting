@@ -1,16 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class StaminaBar : MonoBehaviour
 {
     public Slider staminaBar;
 
-    [SerializeField] private int maxStamina = 500;
+    [SerializeField] private int maxStamina = 1000;
     [SerializeField] public int currentStamina;
-    private WaitForSeconds regenTime = new WaitForSeconds(0.1f);
+    private WaitForSeconds regenTime = new WaitForSeconds(0.05f);
     private Coroutine regen;
     // Start is called before the first frame update
     void Start()

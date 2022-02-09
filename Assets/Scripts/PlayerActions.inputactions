@@ -210,7 +210,7 @@
                     "name": "",
                     "id": "55229a86-4ca7-480a-8ec1-e0c0b9c67402",
                     "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Block",
