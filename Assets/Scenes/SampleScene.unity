@@ -689,7 +689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: 182}
+  m_AnchoredPosition: {x: 311.1, y: 204}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63296043
@@ -9130,7 +9130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -306, y: 182}
+  m_AnchoredPosition: {x: -112.4, y: 204}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493350655
@@ -9856,8 +9856,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 4.5904007, y: 0.000018119812}
+  m_SizeDelta: {x: 19.1809, y: 0.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541990523
 MonoBehaviour:
@@ -19273,8 +19273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 4.8455, y: 0}
+  m_SizeDelta: {x: 19.6909, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381225657
 MonoBehaviour:
@@ -20937,8 +20937,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: 212}
-  m_SizeDelta: {x: 185, y: 53}
+  m_AnchoredPosition: {x: 131.25656, y: 196.13957}
+  m_SizeDelta: {x: 190.5445, y: 21.2791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497257804
 MonoBehaviour:
@@ -24245,8 +24245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 212}
-  m_SizeDelta: {x: 185, y: 53}
+  m_AnchoredPosition: {x: -296.87122, y: 196.1396}
+  m_SizeDelta: {x: 198.4653, y: 21.2791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774179479
 MonoBehaviour:
@@ -29352,7 +29352,7 @@ MonoBehaviour:
     m_ActionId: 52599189-2ca3-4bf3-b07d-6c5d9f00f7d8
     m_ActionName: PlayerControls/Insult[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

@@ -1,5 +1,7 @@
 # Not Beauty and the Beast
-## Multiplayer Fighting Game by **Greek Salad Tiger Milk** (Elyess Eleuch, Liav Keren, Sophie Preußer, Linh Pham)
+
+## Multiplayer Fighting Game by **Greek Salad Tiger Milk**
+
 Unity project for B23.1 GT2 Game Engines WiSe21/22.
 
 # Features
@@ -20,7 +22,7 @@ Two players can play against each other.
 
 Features include
 
-- **Split Screen** 
+- **Split Screen**
   - Screen is split in half so both players can play from their own perspective.
 - **Health Bar**
   - Empties with every punch. When the Health Bar is empty the player loses the Game.
@@ -29,6 +31,7 @@ Features include
 - **Open World Map**
   - The players can move around freely.
 - **Input System**
+  - Keyboard and Gamepad keys are bind using the Input System
 - **Sound Effects**
   - You can get in the mood when Rocky's Theme Music starts playing on the main menu. While playing, the soft breeze of wind is surrounding you and is only disturbed by the sounds of pain and effort when the players move and hit.
 - **Stunning Visuals**
@@ -37,7 +40,8 @@ Features include
 
 ## Game Play
 
-The player moves using the keyboard 
+The player moves using the keyboard
+
 - **W** The player moves away from the camera
 - **S** The player turns and moves in the direction of the camera
 - **A** The player turns and moves left
@@ -55,13 +59,18 @@ The game is won when the healthbar of one of the players is empty. Then they can
 ![Health Bar](Assets/Screenshots/HealthBarEmpties.png)
 ![Winner Screen](Assets/Screenshots/WinnerScreen.png)
 
-
-
 # Internal Things
+
 - Please make sure to import Animations under Assets before starting the project
 - No direct pushes to master, If you built a new feature then please checkout a new branch and then make a merge request
 - Merge Requests has to be reviewed/tested by at least one person, if it was approved then it can be merged (please no hard feelings here and dob't anything personal :))
-- Private fields has to start with an underscore please ("_")
+- Private fields has to start with an underscore please ("\_")
 - Please try to name your variables as accurate as possible (think of the people who don't know the code)
 - Please try to stay within the convention of conventional commits https://www.conventionalcommits.org/en/v1.0.0/
 
+# Participants
+
+- Elyess Eleuch
+- Liav Keren
+- Sophie Preußer
+- Linh Pham

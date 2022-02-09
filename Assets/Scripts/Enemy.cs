@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour
     public PlayerInput playerInput;
     private InputAction moveAction;
     public StaminaBar staminaBar;
+    private int requiredPunchStamina = 5;
+    private int requiredHeavyPunchStamina = 7;
+    private int requiredFeetKickStamina = 8;
+    private int requiredJumpStamina = 5;
+    private int requiredBlockStamina = 5;
 
     public void playSound()
     {
@@ -76,7 +81,7 @@ public class Enemy : MonoBehaviour
 
     public void feetKickAction(InputAction.CallbackContext value)
     {
-        if (value.started && (staminaBar.currentStamina > 5))
+        if (value.started && (staminaBar.currentStamina > requiredFeetKickStamina))
         {
             feetKick = true;
         }
@@ -88,7 +93,7 @@ public class Enemy : MonoBehaviour
 
     public void blockAction(InputAction.CallbackContext value)
     {
-        if (value.started && (staminaBar.currentStamina > 10))
+        if (value.started && staminaBar.currentStamina > requiredBlockStamina)
         {
             block = true;
             animator.SetBool("Block", block);
@@ -116,7 +121,7 @@ public class Enemy : MonoBehaviour
 
     public void jumpAction(InputAction.CallbackContext value)
     {
-        if (value.started)
+        if (value.started && staminaBar.currentStamina > requiredJumpStamina)
         {
             animator.SetBool("Jump", true);
         }
@@ -126,17 +131,17 @@ public class Enemy : MonoBehaviour
     {
         if (value.started)
         {
-            if (heavyPunch && (staminaBar.currentStamina > 20))
+            if (heavyPunch && (staminaBar.currentStamina > requiredHeavyPunchStamina))
             {
                 animator.SetBool("HeavyPunch", heavyPunch);
             }
-            else if (feetKick && (staminaBar.currentStamina > 10))
+            else if (feetKick && (staminaBar.currentStamina > requiredFeetKickStamina))
             {
                 animator.SetBool("FeetKick", feetKick);
             }
             else
             {
-                if (staminaBar.currentStamina > 5)
+                if (staminaBar.currentStamina > requiredJumpStamina)
                 {
                     punch = true;
                     animator.SetBool("Punch", punch);
@@ -148,11 +153,11 @@ public class Enemy : MonoBehaviour
 
     public void updateStamina()
     {
-        if (punch) staminaBar.UseStamina(5);
-        else if (heavyPunch) staminaBar.UseStamina(20);
-        else if (feetKick) staminaBar.UseStamina(10);
-        else if (animator.GetBool("Jump")) staminaBar.UseStamina(15);
-        else if (block) staminaBar.UseStamina(5);
+        if (punch) staminaBar.UseStamina(requiredPunchStamina);
+        else if (heavyPunch) staminaBar.UseStamina(requiredHeavyPunchStamina);
+        else if (feetKick) staminaBar.UseStamina(requiredFeetKickStamina);
+        else if (animator.GetBool("Jump")) staminaBar.UseStamina(requiredJumpStamina);
+        else if (block) staminaBar.UseStamina(requiredBlockStamina);
     }
 
     public void insultAction(InputAction.CallbackContext value)

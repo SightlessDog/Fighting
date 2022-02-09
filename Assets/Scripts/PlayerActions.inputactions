@@ -131,17 +131,6 @@
                 },
                 {
                     "name": "",
-                    "id": "3a0b44c6-e3cc-417c-868f-7547eb5ad68b",
-                    "path": "<Gamepad>/dpad",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movements",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4bb98bb8-19ad-4f72-b544-270a5fbe09f0",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
