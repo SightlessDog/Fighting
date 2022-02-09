@@ -40,7 +40,7 @@ Features include
 
 ## Game Play
 
-The player moves using the keyboard
+One player moves and hits using the **keyboard**, the second player plays with a **gamepad** controller.
 
 - **W** The player moves away from the camera
 - **S** The player turns and moves in the direction of the camera
